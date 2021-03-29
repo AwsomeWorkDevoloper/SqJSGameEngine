@@ -44,13 +44,13 @@ export class GameClass{
         // handle mouse click input
         document.addEventListener('mousedown', e => {
             this.latestMouseData = e;
-            this.wasClicked = true;
+            this.latestMouseData.wasClicked = true;
         });
 
         // handle mouse move input
         document.addEventListener('mousemove', e => {
             this.latestMouseData = e;
-            this.wasClicked = false;
+            this.latestMouseData.wasClicked = false;
         });
 
         this.onAwake = ()=>{}

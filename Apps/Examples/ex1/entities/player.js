@@ -49,6 +49,10 @@ player.onUpdate = ()=>{
 
         item.Transform.position.y = 10;
         item.randX = null;
+
+        ground.Transform.size.height += player.score;
+        player.Transform.position.y -= player.score+(ground.collider.edges.top/4);
+        player.SidewaysSpeed = 20 + player.score;
     }
 
     // calculating the edges for the collision detection
